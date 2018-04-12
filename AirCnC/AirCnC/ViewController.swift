@@ -21,14 +21,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
     
+    var item: ItemInfo?
+    
     var currentImageIndex = 0
-    let images = [
-        "hattefjall_1",
-        "hattefjall_2",
-        "hattefjall_3",
-        "hattefjall_4",
-        "hattefjall_5"
-    ]
+    var images: [String] = []
     
     
     @IBAction func showPrevImage(_ sender: Any) {
@@ -53,18 +49,22 @@ class ViewController: UIViewController {
         rightButton.isEnabled = index < images.count - 1
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        imageView.image = UIImage.init(named: "hattefjall")
-        
-        titleLabel.text = "HATTEFJÄLL"
-        
-        userImageView.image = #imageLiteral(resourceName: "jungyeon")
-        userNameLabel.text = "정연"
-        
-        priceLabel.text = "10,000"
-        depthLabel.text = "68cm"
-        widthLabel.text = "68cm"
-        heightLabel.text = "110cm"
+    override func viewWillAppear(_ animated: Bool) {        
+        if let item = item {
+            titleLabel.text = item.itemName
+            userNameLabel.text = item.user.userName
+            if let imageName = item.user.userImage {
+                userImageView.image = UIImage(named: imageName)
+            }
+            priceLabel.text = String(item.price)
+            
+            depthLabel.text = "\(item.size.d)cm"
+            widthLabel.text = "\(item.size.w)cm"
+            heightLabel.text = "\(item.size.h)cm"
+            
+            images = item.detailImage
+            showImage(index: 0)
+        }
     }
     
     override func viewDidLoad() {
