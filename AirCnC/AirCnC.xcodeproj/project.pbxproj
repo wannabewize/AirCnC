@@ -13,6 +13,7 @@
 		2C6DA34C207FCC9300E3E765 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6DA34A207FCC9300E3E765 /* LaunchScreen.storyboard */; };
 		2C6DA354207FDD3F00E3E765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6DA353207FDD3F00E3E765 /* Assets.xcassets */; };
 		2C6DA356207FED0200E3E765 /* ExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6DA355207FED0200E3E765 /* ExplorerViewController.swift */; };
+		2CA4EBE12080B20B00E3E4DE /* SavedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA4EBE02080B20B00E3E4DE /* SavedListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2C6DA34D207FCC9300E3E765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C6DA353207FDD3F00E3E765 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C6DA355207FED0200E3E765 /* ExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerViewController.swift; sourceTree = "<group>"; };
+		2CA4EBE02080B20B00E3E4DE /* SavedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				2C6DA34A207FCC9300E3E765 /* LaunchScreen.storyboard */,
 				2C6DA34D207FCC9300E3E765 /* Info.plist */,
 				2C6DA355207FED0200E3E765 /* ExplorerViewController.swift */,
+				2CA4EBE02080B20B00E3E4DE /* SavedListViewController.swift */,
 			);
 			path = AirCnC;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				2C6DA344207FCC9300E3E765 /* ViewController.swift in Sources */,
 				2C6DA356207FED0200E3E765 /* ExplorerViewController.swift in Sources */,
+				2CA4EBE12080B20B00E3E4DE /* SavedListViewController.swift in Sources */,
 				2C6DA342207FCC9300E3E765 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -48,6 +48,11 @@ class ViewController: UIViewController {
         leftButton.isEnabled = index > 0
         rightButton.isEnabled = index < images.count - 1
     }
+    @IBAction func toggleLike(_ sender: Any) {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            appDelegate.likes.append(self.item!)
+        }        
+    }
     
     override func viewWillAppear(_ animated: Bool) {        
         if let item = item {
