@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C309CC4209F568100F6AC76 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C309CC3209F568100F6AC76 /* ProfileViewController.swift */; };
+		2C309CC6209F57C000F6AC76 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2C309CC5209F57C000F6AC76 /* README.md */; };
 		2C6DA342207FCC9300E3E765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6DA341207FCC9300E3E765 /* AppDelegate.swift */; };
 		2C6DA344207FCC9300E3E765 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6DA343207FCC9300E3E765 /* ViewController.swift */; };
 		2C6DA347207FCC9300E3E765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6DA345207FCC9300E3E765 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C309CC3209F568100F6AC76 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2C309CC5209F57C000F6AC76 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2C6DA33E207FCC9300E3E765 /* AirCnC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirCnC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6DA341207FCC9300E3E765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C6DA343207FCC9300E3E765 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +46,7 @@
 		2C6DA335207FCC9300E3E765 = {
 			isa = PBXGroup;
 			children = (
+				2C309CC5209F57C000F6AC76 /* README.md */,
 				2C6DA340207FCC9300E3E765 /* AirCnC */,
 				2C6DA33F207FCC9300E3E765 /* Products */,
 			);
@@ -66,6 +71,7 @@
 				2C6DA34D207FCC9300E3E765 /* Info.plist */,
 				2C6DA355207FED0200E3E765 /* ExplorerViewController.swift */,
 				2CA4EBE02080B20B00E3E4DE /* SavedListViewController.swift */,
+				2C309CC3209F568100F6AC76 /* ProfileViewController.swift */,
 			);
 			path = AirCnC;
 			sourceTree = "<group>";
@@ -130,6 +136,7 @@
 			files = (
 				2C6DA34C207FCC9300E3E765 /* LaunchScreen.storyboard in Resources */,
 				2C6DA354207FDD3F00E3E765 /* Assets.xcassets in Resources */,
+				2C309CC6209F57C000F6AC76 /* README.md in Resources */,
 				2C6DA347207FCC9300E3E765 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +150,7 @@
 			files = (
 				2C6DA344207FCC9300E3E765 /* ViewController.swift in Sources */,
 				2C6DA356207FED0200E3E765 /* ExplorerViewController.swift in Sources */,
+				2C309CC4209F568100F6AC76 /* ProfileViewController.swift in Sources */,
 				2CA4EBE12080B20B00E3E4DE /* SavedListViewController.swift in Sources */,
 				2C6DA342207FCC9300E3E765 /* AppDelegate.swift in Sources */,
 			);

@@ -66,10 +66,26 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var saveButton: UIButton!
     @IBAction func toggleSave(_ sender: Any) {
-        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-            appDelegate.saves.append(self.item!)
-        }        
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+            let item = item {
+            if appDelegate.isSaved(item: item) {
+                appDelegate.removeSave(item)
+            }
+            else {
+                appDelegate.addSave(item)
+            }
+            showSaveButtonTitle()
+        }
+    }
+    
+    func showSaveButtonTitle() {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+            let item = item {
+            let buttonTitle = appDelegate.isSaved(item: item) ? "UnLike" : "Like"
+            saveButton.setTitle(buttonTitle, for: .normal)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {        
@@ -88,9 +104,7 @@ class ViewController: UIViewController {
             images = item.detailImage
             showImage(index: 0)
             
-            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-                
-            }
+            showSaveButtonTitle()
         }
     }
     

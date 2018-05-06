@@ -276,6 +276,7 @@
                         <outlet property="priceLabel" destination="nd4-qx-7cU" id="JB3-ps-Ovd"/>
                         <outlet property="reserveButton" destination="igp-Fn-RYk" id="umL-hF-Nti"/>
                         <outlet property="rightButton" destination="UY8-hQ-3pw" id="dp8-aP-q9e"/>
+                        <outlet property="saveButton" destination="Rc4-IL-0br" id="bZP-71-dLT"/>
                         <outlet property="titleLabel" destination="A9l-LI-ct8" id="xyT-y5-RcX"/>
                         <outlet property="userImageView" destination="qoA-fA-CX5" id="LS0-c2-pdu"/>
                         <outlet property="userNameLabel" destination="BJR-hC-cme" id="IXF-7R-9Wu"/>
@@ -385,11 +386,23 @@
         <!--Profile-->
         <scene sceneID="skx-uH-cy9">
             <objects>
-                <viewController id="D33-Vc-6Sf" sceneMemberID="viewController">
+                <viewController id="D33-Vc-6Sf" customClass="ProfileViewController" customModule="AirCnC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d7T-x8-Wqf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAP-ub-lm3">
+                                <rect key="frame" x="123.5" y="315.5" width="128" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iAP-ub-lm3" firstAttribute="centerX" secondItem="d7T-x8-Wqf" secondAttribute="centerX" id="V1e-wT-Ylt"/>
+                            <constraint firstItem="iAP-ub-lm3" firstAttribute="centerY" secondItem="d7T-x8-Wqf" secondAttribute="centerY" id="sPg-kX-C3V"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4DY-hn-U6K"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="k2d-Mp-nWl"/>

@@ -15,7 +15,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var saves : [ItemInfo] = []
     func isSaved(item: ItemInfo) -> Bool {
-        return true
+        for one in saves {
+            // 제품 이름으로 같다고 비교한다. TODO : equal operator 작성
+            if one.itemName == item.itemName {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func addSave(_ item: ItemInfo) {
+        saves.append(item)
+    }
+    
+    func removeSave(_ item: ItemInfo) {
+        for (index, one) in saves.enumerated() {
+            // 제품 이름으로 같다고 비교한다. TODO : equal operator 작성
+            if one.itemName == item.itemName {
+                saves.remove(at: index)
+                return
+            }
+        }
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
