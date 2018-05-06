@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2C309CC4209F568100F6AC76 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C309CC3209F568100F6AC76 /* ProfileViewController.swift */; };
 		2C309CC6209F57C000F6AC76 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2C309CC5209F57C000F6AC76 /* README.md */; };
+		2C309CC8209F5D9C00F6AC76 /* ReserveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C309CC7209F5D9C00F6AC76 /* ReserveViewController.swift */; };
+		2C309CCA209F682F00F6AC76 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C309CC9209F682F00F6AC76 /* Reservation.swift */; };
 		2C6DA342207FCC9300E3E765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6DA341207FCC9300E3E765 /* AppDelegate.swift */; };
 		2C6DA344207FCC9300E3E765 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6DA343207FCC9300E3E765 /* ViewController.swift */; };
 		2C6DA347207FCC9300E3E765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6DA345207FCC9300E3E765 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		2C309CC3209F568100F6AC76 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2C309CC5209F57C000F6AC76 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2C309CC7209F5D9C00F6AC76 /* ReserveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveViewController.swift; sourceTree = "<group>"; };
+		2C309CC9209F682F00F6AC76 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		2C6DA33E207FCC9300E3E765 /* AirCnC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirCnC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6DA341207FCC9300E3E765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C6DA343207FCC9300E3E765 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				2C6DA355207FED0200E3E765 /* ExplorerViewController.swift */,
 				2CA4EBE02080B20B00E3E4DE /* SavedListViewController.swift */,
 				2C309CC3209F568100F6AC76 /* ProfileViewController.swift */,
+				2C309CC7209F5D9C00F6AC76 /* ReserveViewController.swift */,
+				2C309CC9209F682F00F6AC76 /* Reservation.swift */,
 			);
 			path = AirCnC;
 			sourceTree = "<group>";
@@ -153,6 +159,8 @@
 				2C309CC4209F568100F6AC76 /* ProfileViewController.swift in Sources */,
 				2CA4EBE12080B20B00E3E4DE /* SavedListViewController.swift in Sources */,
 				2C6DA342207FCC9300E3E765 /* AppDelegate.swift in Sources */,
+				2C309CCA209F682F00F6AC76 /* Reservation.swift in Sources */,
+				2C309CC8209F5D9C00F6AC76 /* ReserveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
