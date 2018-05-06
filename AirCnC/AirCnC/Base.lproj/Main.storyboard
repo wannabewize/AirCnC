@@ -184,6 +184,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yl-Lt-dtd">
                                         <rect key="frame" x="0.0" y="220" width="343" height="30"/>
                                         <state key="normal" title="예약하기"/>
+                                        <connections>
+                                            <action selector="toggleDatePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lv7-rw-88P"/>
+                                        </connections>
                                     </button>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="GYb-O5-Qhl">
                                         <rect key="frame" x="0.0" y="258" width="343" height="216"/>
@@ -224,11 +227,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="datePicker" destination="GYb-O5-Qhl" id="jhO-2Y-uMJ"/>
                         <outlet property="depthLabel" destination="tlS-92-xpo" id="FAy-nI-t5l"/>
                         <outlet property="heightLabel" destination="YWu-vl-AF1" id="gKK-Gg-LyZ"/>
                         <outlet property="imageView" destination="M3a-Pv-Z3d" id="EbX-1b-bHq"/>
                         <outlet property="leftButton" destination="EF3-12-k6U" id="VzY-wS-fg6"/>
                         <outlet property="priceLabel" destination="nd4-qx-7cU" id="JB3-ps-Ovd"/>
+                        <outlet property="reserveButton" destination="5Yl-Lt-dtd" id="wz1-an-Qf7"/>
                         <outlet property="rightButton" destination="UY8-hQ-3pw" id="dp8-aP-q9e"/>
                         <outlet property="titleLabel" destination="A9l-LI-ct8" id="xyT-y5-RcX"/>
                         <outlet property="userImageView" destination="qoA-fA-CX5" id="LS0-c2-pdu"/>

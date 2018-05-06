@@ -49,6 +49,23 @@ class ViewController: UIViewController {
         rightButton.isEnabled = index < images.count - 1
     }
     
+    // 예약 버튼과 예약 날짜 피커
+    @IBOutlet weak var reserveButton: UIButton!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    let dateFormatter = DateFormatter()
+    
+    @IBAction func toggleDatePicker(_ sender: Any) {
+        datePicker.isHidden = !datePicker.isHidden
+        
+        if datePicker.isHidden {
+            let selectedDate = dateFormatter.string(from: datePicker.date)
+            reserveButton.setTitle(selectedDate, for: .normal)
+        }
+        else {
+            reserveButton.setTitle("예약하기", for: .normal)
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {        
         if let item = item {
             titleLabel.text = item.itemName
@@ -69,6 +86,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dateFormatter.dateStyle = .medium
     }
 
     override func didReceiveMemoryWarning() {
