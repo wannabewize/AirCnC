@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SavedListViewController: UITableViewController {
+class SavedTableViewController: UITableViewController {
     
     var data: [ItemInfo] = []
 
@@ -22,7 +22,7 @@ class SavedListViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        data = appDelegate.likes
+        data = appDelegate.saves
         
         self.tableView.reloadData()
     }
