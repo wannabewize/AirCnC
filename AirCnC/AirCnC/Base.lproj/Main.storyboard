@@ -75,7 +75,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YO9-nC-jUZ">
-                                <rect key="frame" x="16" y="322" width="343" height="212"/>
+                                <rect key="frame" x="16" y="322" width="343" height="474"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9l-LI-ct8">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -181,6 +181,16 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yl-Lt-dtd">
+                                        <rect key="frame" x="0.0" y="220" width="343" height="30"/>
+                                        <state key="normal" title="예약하기"/>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="GYb-O5-Qhl">
+                                        <rect key="frame" x="0.0" y="258" width="343" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="547300028.03484499">
+                                            <!--2018-05-06 11:47:08 +0000-->
+                                        </date>
+                                    </datePicker>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EF3-12-k6U">
