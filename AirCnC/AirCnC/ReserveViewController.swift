@@ -32,25 +32,26 @@ class ReserveViewController: UITableViewController {
     
     @IBAction func handleFrom(_ sender: Any) {
         let indexPath: IndexPath = IndexPath(row: 1, section: 0)
+        cellHeight[1] = (cellHeight[1] == 0) ? 216 : 0
+        
         if cellHeight[1] == 0 {
-            cellHeight[1] = 216
-            self.tableView.reloadRows(at: [indexPath], with: .none)
+            self.tableView.reloadRows(at: [indexPath], with: .top)
         }
         else {
-            cellHeight[1] = 0
-            self.tableView.reloadRows(at: [indexPath], with: .top)
+            self.tableView.reloadRows(at: [indexPath], with: .none)
         }
     }
     
     @IBAction func handleTo(_ sender: Any) {
+        cellHeight[3] = (cellHeight[3] == 0) ? 216 : 0
+
+        let indexPath: IndexPath = IndexPath(row: 3, section: 0)
         if cellHeight[3] == 0 {
-            cellHeight[3] = 216
+            self.tableView.reloadRows(at: [indexPath], with: .top)
         }
         else {
-            cellHeight[3] = 0
+            self.tableView.reloadRows(at: [indexPath], with: .none)
         }
-        let indexPath: IndexPath = IndexPath(row: 3, section: 0)
-        self.tableView.reloadRows(at: [indexPath], with: .bottom)
     }
     
     override func viewDidLoad() {
