@@ -70,8 +70,8 @@ class ComposeViewController: UIViewController, UITableViewDataSource, UITableVie
         items.append(ItemInfo(itemName: "TIMSFORS", itemImage: "TIMSFORS1", price: 89900,
                               detailImage: ["TIMSFORS1", "TIMSFORS2", "TIMSFORS3", "TIMSFORS4"], size: SizeInfo(w: 175, d: 94, h: 88),
                               user: UserInfo(userName: "정연", userImage:"jungyeon")))
-        items.append(ItemInfo(itemName: "KLIPPAN", itemImage: "KLIPPAN1", price: 14900,
-                              detailImage: ["KLIPPAN1", "KLIPPAN2", "KLIPPAN3", "KLIPPAN4"], size: SizeInfo(w: 138, d: 87, h: 67),
+        items.append(ItemInfo(itemName: "DELAKTIG", itemImage: "DELAKTIG1", price: 82900,
+                              detailImage: ["DELAKTIG1", "DELAKTIG2", "DELAKTIG3", "DELAKTIG4"], size: SizeInfo(w: 114, d: 84, h: 45),
                               user: UserInfo(userName: "쯔위", userImage:"tzuyu")))
     }
 
