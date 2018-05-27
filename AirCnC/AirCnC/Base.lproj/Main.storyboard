@@ -551,8 +551,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Eqn-f1-qu0">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Jm1-3J-ghY"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="nu3-KP-GVY"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Jm1-3J-ghY">
+                            <connections>
+                                <action selector="handleCancel:" destination="XRw-0u-S64" id="Owv-Zo-zmX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="nu3-KP-GVY">
+                            <connections>
+                                <action selector="handleDone:" destination="XRw-0u-S64" id="9DT-JF-bEb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfc-mJ-nEF" userLabel="First Responder" sceneMemberID="firstResponder"/>

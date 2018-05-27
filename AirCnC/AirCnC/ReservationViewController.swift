@@ -26,12 +26,38 @@ class ReservationViewController: UITableViewController {
     }
 
 
+    @IBAction func handleCancel(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     
     
+    @IBAction func handleDone(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
+    var isShowingStartPicker: Bool = false
+    var isShowingEndPicker: Bool = false
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            isShowingStartPicker = !isShowingStartPicker
+            tableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .none)
+        }
+        else if indexPath.row == 2 {
+            isShowingEndPicker = !isShowingEndPicker
+            tableView.reloadRows(at: [IndexPath(row: 3, section: 0)], with: .none)
+        }
+    }
     
-    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 1 {
+            return isShowingStartPicker ? 216 : 0
+        }
+        else if indexPath.row == 3 {
+            return isShowingEndPicker ? 216 : 0
+        }
+        return super.tableView(tableView, heightForRowAt: indexPath)
+    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
