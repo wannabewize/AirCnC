@@ -439,10 +439,10 @@
             </objects>
             <point key="canvasLocation" x="2503" y="304"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Reservation View Controller-->
         <scene sceneID="JDU-wh-UYd">
             <objects>
-                <tableViewController id="XRw-0u-S64" sceneMemberID="viewController">
+                <tableViewController id="XRw-0u-S64" customClass="ReservationViewController" customModule="AirCnC" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3d4-Eg-bSF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
