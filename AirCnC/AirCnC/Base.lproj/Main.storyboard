@@ -17,7 +17,6 @@
         <!--Explorer-->
         <scene sceneID="ijV-Lf-CKA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZtP-i2-CXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="wQz-UM-kfJ" customClass="ExplorerViewController" customModule="AirCnC" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="P7I-3K-1at">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -58,6 +57,7 @@
                         <barButtonItem key="rightBarButtonItem" title="+" id="g0y-dP-Prs"/>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZtP-i2-CXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1380" y="-521"/>
         </scene>
@@ -358,9 +358,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igp-Fn-RYk">
                                         <rect key="frame" x="0.0" y="115" width="359" height="30"/>
                                         <state key="normal" title="예약하기"/>
-                                        <connections>
-                                            <segue destination="gri-ou-6uP" kind="presentation" id="5dF-J3-eVa"/>
-                                        </connections>
                                     </button>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QnQ-IT-xfV">
                                         <rect key="frame" x="0.0" y="153" width="359" height="216"/>
@@ -635,7 +632,7 @@
                                 <connections>
                                     <outlet property="imageView" destination="bnE-GM-Qm1" id="iI0-b5-SW4"/>
                                     <outlet property="nameLabel" destination="PCD-Rv-6kx" id="yAp-xD-3aV"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="iub-rn-Tso"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="detailSegue" id="iub-rn-Tso"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -760,24 +757,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vX-e9-cDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="406" y="1646"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="2ud-oM-c4B">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gri-ou-6uP" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UZZ-7M-98u">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="XRw-0u-S64" kind="relationship" relationship="rootViewController" id="9l5-80-pe9"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cIh-ru-mEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3344.8000000000002" y="303.59820089955025"/>
         </scene>
     </scenes>
 </document>
