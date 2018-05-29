@@ -66,6 +66,29 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func handleReservation(_ sender: Any) {
+        datePicker.isHidden = !datePicker.isHidden
+        
+        if datePicker.isHidden {
+            
+            let dialog = UIAlertController(title: "예약하시겠습니까?", message: nil, preferredStyle: .alert)
+            let confirmAction = UIAlertAction(title: "확인", style: .default) { (action) in
+                let selectedDate = self.dateFormatter.string(from: self.datePicker.date)
+                self.reserveButton.setTitle(selectedDate, for: .normal)
+                Reservation.shared.addReservation(self.item!, date: self.datePicker.date)
+            }
+            let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: { (action) in
+                self.reserveButton.setTitle("예약하기", for: .normal)
+                
+            })
+            dialog.addAction(cancelAction)
+            dialog.addAction(confirmAction)
+            self.present(dialog, animated: true, completion: nil)
+        }
+        else {
+            reserveButton.setTitle("예약하기", for: .normal)
+        }
+    }
     @IBOutlet weak var saveButton: UIButton!
     @IBAction func toggleSave(_ sender: Any) {
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate,

@@ -8,17 +8,45 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ReservationCell: UITableViewCell {
+    @IBOutlet weak var itemNameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var itemImageView: UIImageView!
+}
+
+class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var dateFormatter: DateFormatter!
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Reservation.shared.reserves.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReserveCell", for: indexPath) as! ReservationCell
+        let reserveInfo = Reservation.shared.reserves[indexPath.row]
+        
+        cell.itemNameLabel.text = reserveInfo.item.itemName
+        cell.itemImageView.image = UIImage(named: reserveInfo.item.itemImage)
+        cell.dateLabel.text = dateFormatter.string(from: reserveInfo.date)
+        
+        return cell
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
     
 

@@ -10,6 +10,16 @@ import Foundation
 
 
 struct ReserveInfo {
-    var checkIn: Date
-    var checkOut: Date
+    var item: ItemInfo
+    var date: Date
+}
+
+class Reservation {
+    static let shared = Reservation()
+    
+    var reserves: [ReserveInfo] = []
+    
+    func addReservation(_ item: ItemInfo, date : Date) {
+        reserves.append( ReserveInfo(item: item, date: date) )
+    }
 }
