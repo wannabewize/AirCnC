@@ -88,7 +88,9 @@ class ViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {        
+    override func viewWillAppear(_ animated: Bool) {
+        datePicker.isHidden = true
+        
         if let item = item {
             titleLabel.text = item.itemName
             userNameLabel.text = item.user.userName
