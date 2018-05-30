@@ -10,7 +10,8 @@ import UIKit
 
 class ReservationCell: UITableViewCell {
     @IBOutlet weak var itemNameLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var fromDateLabel: UILabel!
+    @IBOutlet weak var toDateLabel: UILabel!
     @IBOutlet weak var itemImageView: UIImageView!
 }
 
@@ -40,7 +41,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         
         cell.itemNameLabel.text = reserveInfo.item.itemName
         cell.itemImageView.image = UIImage(named: reserveInfo.item.itemImage)
-        cell.dateLabel.text = dateFormatter.string(from: reserveInfo.date)
+        cell.fromDateLabel.text = dateFormatter.string(from: reserveInfo.from)
+        cell.toDateLabel.text = dateFormatter.string(from: reserveInfo.to)
         
         return cell
     }

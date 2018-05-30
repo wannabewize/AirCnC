@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ReservationDateProtocol {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
@@ -49,46 +49,6 @@ class ViewController: UIViewController {
         rightButton.isEnabled = index < images.count - 1
     }
     
-    // 예약 버튼과 예약 날짜 피커
-    @IBOutlet weak var reserveButton: UIButton!
-    @IBOutlet weak var datePicker: UIDatePicker!
-    let dateFormatter = DateFormatter()
-    
-    @IBAction func toggleDatePicker(_ sender: Any) {
-        datePicker.isHidden = !datePicker.isHidden
-        
-        if datePicker.isHidden {
-            let selectedDate = dateFormatter.string(from: datePicker.date)
-            reserveButton.setTitle(selectedDate, for: .normal)
-        }
-        else {
-            reserveButton.setTitle("예약하기", for: .normal)
-        }
-    }
-    
-    @IBAction func handleReservation(_ sender: Any) {
-        datePicker.isHidden = !datePicker.isHidden
-        
-        if datePicker.isHidden {
-            
-            let dialog = UIAlertController(title: "예약하시겠습니까?", message: nil, preferredStyle: .alert)
-            let confirmAction = UIAlertAction(title: "확인", style: .default) { (action) in
-                let selectedDate = self.dateFormatter.string(from: self.datePicker.date)
-                self.reserveButton.setTitle(selectedDate, for: .normal)
-                Reservation.shared.addReservation(self.item!, date: self.datePicker.date)
-            }
-            let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: { (action) in
-                self.reserveButton.setTitle("예약하기", for: .normal)
-                
-            })
-            dialog.addAction(cancelAction)
-            dialog.addAction(confirmAction)
-            self.present(dialog, animated: true, completion: nil)
-        }
-        else {
-            reserveButton.setTitle("예약하기", for: .normal)
-        }
-    }
     @IBOutlet weak var saveButton: UIButton!
     @IBAction func toggleSave(_ sender: Any) {
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
@@ -103,6 +63,26 @@ class ViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DateSettingSegue",
+            let dateSettingVC = segue.destination as? DateSettingViewController {
+            dateSettingVC.delegate = self
+        }
+    }
+    
+    @IBOutlet weak var dateSetButton: UIButton!
+    var fromDate, toDate: Date?
+    func handleReservationDate(from: Date, to: Date) {
+        self.fromDate = from
+        self.toDate = to
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        
+        let dateStr = "\( dateFormatter.string(from: from)) ~ \( dateFormatter.string(from: to))"        
+        dateSetButton.setTitle(dateStr, for: .normal)
+    }
+    
     func showSaveButtonTitle() {
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
             let item = item {
@@ -111,8 +91,23 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func handleReserve(_ sender: Any) {
+        guard let from = fromDate, let to = toDate else {
+            let dialog = UIAlertController(title: "날짜를 설정하세요", message: nil, preferredStyle: .alert)
+            dialog.addAction( UIAlertAction(title: "확인", style: .default, handler: nil) )
+            self.present(dialog, animated: true, completion: nil)
+            return
+        }
+        
+        let dialog = UIAlertController(title: "예약하시겠습니까?", message: nil, preferredStyle: .alert)
+        dialog.addAction( UIAlertAction(title: "취소", style: .cancel, handler: nil) )
+        dialog.addAction( UIAlertAction(title: "확인", style: .default, handler: { (action) in
+            Reservation.shared.addReservation(self.item!, from: from, to: to)
+        }))
+        self.present(dialog, animated: true, completion: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
-        datePicker.isHidden = true
         
         if let item = item {
             titleLabel.text = item.itemName
@@ -135,7 +130,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dateFormatter.dateStyle = .medium
     }
 
     override func didReceiveMemoryWarning() {

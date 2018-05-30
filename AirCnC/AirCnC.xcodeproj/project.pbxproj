@@ -21,7 +21,7 @@
 		2C6E729720AB1AE9002CB8D4 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E729620AB1AE9002CB8D4 /* ComposeViewController.swift */; };
 		2C6E729920AB291A002CB8D4 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E729820AB291A002CB8D4 /* Items.swift */; };
 		2CA4EBE12080B20B00E3E4DE /* SavedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA4EBE02080B20B00E3E4DE /* SavedListViewController.swift */; };
-		2CBD2F0B20AB59E7007B8826 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD2F0A20AB59E7007B8826 /* ReservationViewController.swift */; };
+		2CBD2F0B20AB59E7007B8826 /* DateSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD2F0A20AB59E7007B8826 /* DateSettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		2C6E729620AB1AE9002CB8D4 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		2C6E729820AB291A002CB8D4 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		2CA4EBE02080B20B00E3E4DE /* SavedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListViewController.swift; sourceTree = "<group>"; };
-		2CBD2F0A20AB59E7007B8826 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
+		2CBD2F0A20AB59E7007B8826 /* DateSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,7 @@
 				2C309CC9209F682F00F6AC76 /* Reservation.swift */,
 				2C6E729820AB291A002CB8D4 /* Items.swift */,
 				2C6E729620AB1AE9002CB8D4 /* ComposeViewController.swift */,
-				2CBD2F0A20AB59E7007B8826 /* ReservationViewController.swift */,
+				2CBD2F0A20AB59E7007B8826 /* DateSettingViewController.swift */,
 				2C49D32220BC07610097224C /* ExplorerCollectionViewController.swift */,
 			);
 			path = AirCnC;
@@ -172,7 +172,7 @@
 				2C6E729720AB1AE9002CB8D4 /* ComposeViewController.swift in Sources */,
 				2C6E729920AB291A002CB8D4 /* Items.swift in Sources */,
 				2C49D32320BC07610097224C /* ExplorerCollectionViewController.swift in Sources */,
-				2CBD2F0B20AB59E7007B8826 /* ReservationViewController.swift in Sources */,
+				2CBD2F0B20AB59E7007B8826 /* DateSettingViewController.swift in Sources */,
 				2CA4EBE12080B20B00E3E4DE /* SavedListViewController.swift in Sources */,
 				2C6DA342207FCC9300E3E765 /* AppDelegate.swift in Sources */,
 				2C309CCA209F682F00F6AC76 /* Reservation.swift in Sources */,

@@ -11,7 +11,8 @@ import Foundation
 
 struct ReserveInfo {
     var item: ItemInfo
-    var date: Date
+    var from: Date
+    var to: Date
 }
 
 class Reservation {
@@ -19,7 +20,7 @@ class Reservation {
     
     var reserves: [ReserveInfo] = []
     
-    func addReservation(_ item: ItemInfo, date : Date) {
-        reserves.append( ReserveInfo(item: item, date: date) )
+    func addReservation(_ item: ItemInfo, from: Date, to: Date) {
+        reserves.append( ReserveInfo(item: item, from: from, to: to) )
     }
 }
